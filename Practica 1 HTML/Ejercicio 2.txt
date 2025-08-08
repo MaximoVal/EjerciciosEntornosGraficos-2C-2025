@@ -1,0 +1,38 @@
+La etiqueta div sirve para dividir en "contenedores" una sección. Dentro de la misma esta el atributo id que no es obligatorio, pero sirve como identificador único de ese elemento.
+2.c)
+<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32"
+longdesc="detalles.htm" /> La etiqueta imagen sirve para poder insertar una imagen dentro del cuerpo de la pagina, el atributo src es obligatorio ya que ahí se coloca la ruta hacia donde esta el archivo para que el navegador pueda cargarlo. El atributo alt si bien no es obligatorio, ya que si no se coloca ningún valor no afecta a la pagina, si es altamente recomendado ya que el mismo ayuda a la accesibilidad de la pagina haciendo que personas no videntes sepan que hay una imagen y su descripción. El id y name son para identificar el elemento, with y heigth  son para darle una medida al elemento y longdesc es una descripción larga la cual se accede mediante una url.Estos últimos no son obligatorios
+2.d)
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+La etiqueta meta es para añadir información útil sobre la pagina, en este caso añade palabras claves, mediante llamar keywords a la etiqueta,para que el buscador relacione esa pagina con esas palabras a la hora de llamarla. Ademas con Lang especifica el lenguaje de la pagina y con hhtp-equiv="exipres" indica la fecha de expiración de la pagina
+
+2.e)
+<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8"
+rel="help">Resumen HTML </a>
+Con la etiqueta a insertamos un link a la pagina. href es un atributo obligatorio ya que esta es la ruta de donde debe llevar al usuario el link. Type es el tipo de archivo hacia donde va el enlace, hreflangg es el idioma del lugar hacia donde lleva el enlace, charset  es el tipo de caracteres que utiliza la pagina.
+
+2.f)
+<table width="200" summary="Datos correspondientes al ejercicio vencido">
+<caption align="top"> Título </caption>
+<tr>
+<th scope="col">\&nbsp;</th>
+<th scope="col">A</th>
+<th scope="col">B</th>
+<th scope="col">C</th>
+</tr>
+<tr>
+<th scope="row">1º</th>
+<td>\&nbsp;</td>
+<td>\&nbsp;</td>
+<td>\&nbsp;</td>
+</tr>
+<tr>
+<th scope="row">2º</th>
+<td>\&nbsp;</td>
+<td>\&nbsp;</td>
+<td>\&nbsp;</td>
+</tr>
+</table>
+
+Aquí se muestra el cuerpo de una tabla que se inserta a la pagina mediante <table></table>, añadiendo filas con tr y columnas o las intersecciones de esas filas con td. Luego th sirve para colocar la cabecera de casa columna.Para especificar a donde va el encabezado se utiliza el atributo scope. Summary se refiere al nombre que va a tener esa tabla, caption al titulo visible de esa tabla, que la misma tiene un atributo aling que como valor va a tener hacia donde quiero que este alineado ese titulo.
