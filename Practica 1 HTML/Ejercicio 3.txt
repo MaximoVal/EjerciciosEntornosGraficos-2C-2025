@@ -1,0 +1,32 @@
+<a href="http://www.google.com.ar" target="\_blank">Click aquí para ir a Google</a>
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+<a href="#">Click aquí para ir a Google</a>
+<a href="#arriba">Click aquí para volver arriba</a>
+<a name="arriba" id="arriba"></a>
+En el 1, la pagina se abre en la misma pestaña, mientras que la 2 es un una pestaña nueva.En la 4 no lleva a ningún lado ya que no tiene un href concreto, solo recargaría la pagina actual. La 5 es para ir hacia un ancla en la misma pagina y la 6 no se mustra nada ya que no presenta un href.
+
+3.b)
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <ahref="http://www.google.com.ar">Click aquí</a></p>
+En 1 hay una imagen dentro de un párrafo la cual es NO clickeable y el "click aquí" que SI es clickeable y te llevaria a Google. En cambio en la 2 el "click aquí" como esta afuera de la etiqueta a, no es clickeable ni te lleva a ningún lado, pero si la imagen. En la 3, la imagen y el texto te direccionan hacia Google. La 4 ambos son clickeables y te llevan hacia Google, pero lo hacen ,mediante dos enlaces distintos e independientes.
+
+3.c)
+Tenemos distintos tipos de lista, la 1era es una lista desordenada(<ul>), junto con sus elementos(<li>); la 2da es una lista ordenada(<ol>), junto a sus elementos(<li>); la 3era son varias listas ordenadas con 1 elemento, las cuales tienen un valor ; y la ultima es una especie de lista pero utilizando una etiqueta que no tiene la semantica de lista.
+3.d)
+En el primero se utiliza la etiqueta th para indicar los encabezados, mientras que en la segunda se utiliza div para hacer lo mismo, pero sintacticamente esta mal ya qeu existe una etiqueta especifica para eso.
+3.e)
+En el primero se utiliza una etiqueta caption para indicar el titulo de la tabla, mientras que la segundo se utiliza un div para ponerle una especie de titulo, pero esta erroneo. Ademas en la 2 utiliza un colspan para combinar 3 columnas
+3.f)
+En el 1er caso combina 2 filas mediante rowspan y en la 2da combina 2 columnas mediante colspan
+3.g)
+En la 2da tabla a diferencia de la 1era, utiliza 2 atributos para hacer mas "vistosa" la tabla, definiendo el espacio entre la celda y el borde a 0.
+3.i)
+Por un lado, el botón 1 se diferencia del botón 2 porque incluye un logo y una descripción, además de tener un ancho y alto que no se ajustan a los valores establecidos.
+Otra diferencia importante es que el primer botón está definido con la etiqueta <button>, mientras que el segundo utiliza <input> y tiene un atributo value asignado.
+3.j)
+La diferencia entre ambos grupos de radios radica en la selección múltiple. En el primer caso, al compartir el mismo atributo name, se agrupan como opciones de una misma elección, impidiendo que se puedan seleccionar al mismo tiempo.
+En cambio, en el segundo fragmento, los botones de opción tienen nombres distintos, por lo tanto, se consideran independientes y permiten selecciones múltiples.
+3.k)
+Una de las principales diferencias es el uso del atributo multiple, que habilita la selección de varias opciones en el primer caso. Por eso, en el segundo select se utiliza name="lista[]", lo que indica que los datos se enviarán como un arreglo al permitir múltiples elecciones.
