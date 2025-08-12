@@ -6,7 +6,7 @@
 
 
 
-3\_	Al documento se le pueden dar estilos de 3 maneras: en el elemento, ej <h1 color="green">...</h1>, nivel de pagina, que seria declarar los atributos de los elementos en el <head> utilizando la etiqueta <style></style> o mediante un archivo externo que tenga la extensión .css
+3_	Al documento se le pueden dar estilos de 3 maneras: en el elemento, ej <h1 color="green">...</h1>, nivel de pagina, que seria declarar los atributos de los elementos en el <head> utilizando la etiqueta <style></style> o mediante un archivo externo que tenga la extensión .css
 
 
 
