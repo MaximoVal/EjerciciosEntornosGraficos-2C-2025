@@ -1,0 +1,4 @@
+1_	CSS es una hoja de estilo, que es una tecnológica que nos permite modificar la apariencia de la pagina, ayudando a organizar los elementos, darles colores, animaciones. En otras palabras es hacer que el HTML sea mucho mas vistoso y que genere atracción al usuario.
+
+2_	Las reglas que presenta CSS son: como su nombre lo indica va en cascada, lo que quiere decir que tiene una precedencia de arriba hacia abajo, luego que al querer darle un estilo a algún elemento necesitamos seleccionarlo(mediante algún selector) y luego a ese elemento seleccionado debemos declararle entre llaves ({}) los atributos que va a tener, ya sea el tamaño, el color, etc.
+3_	Al documento se le pueden dar estilos de 3 maneras: en el elemento, ej <h1 color="green">...</h1>, nivel de pagina, que seria declarar los atributos de los elementos en el <head> utilizando la etiqueta <style></style> o mediante un archivo externo que tenga la extensión .css
