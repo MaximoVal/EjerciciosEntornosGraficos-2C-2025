@@ -1,0 +1,8 @@
+En el 1er ejemplo, la clase contenido, junto a sus atributos, se le aplica solo a '<p class="contenido" style="font-weight: normal;">', pero al redefinirse el atributo de "font-weight", el mismo va a tener un font-weight normal y no bold como estaba definido en la clase contenido. 
+Ademas en el fragmento de estilo, se le alpica a todos los elementos un color verde, pero el parrafo luego se le asigna el color negro, que va a ser su color final, al igual que el tamaño de letra(font-size), definido primero en 10px, con el selector de parrafo, pero luego redefinido con el selector de clase contenido.
+En cambio, en el 2do ejemplo esta aplicandose al body, por lo cual todos los elementos que se encuentren dentro de el van a tener dicho estilo.
+Luego :
+"a:link {color:gray }" Aqui todos los links sin visitar estan de color gris
+"a:visited{color:blue }" Los que estan visitados de color azul
+"a:hover {color:fuchsia }" Al pasarle el mouse por encima se ponen de color fuchsia
+"a:active {color:red }" Al clickear el link se pone de color rojo.
