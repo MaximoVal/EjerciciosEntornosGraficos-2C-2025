@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura B - Empresa Imaginaria S.A.</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .company-info {
+            flex: 1;
+        }
+        
+        .company-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .document-type {
+            border: 2px solid black;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0 20px;
+        }
+        
+        .invoice-info {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .invoice-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .info-line {
+            margin: 3px 0;
+        }
+        
+        .separator {
+            border-top: 2px solid black;
+            margin: 15px 0;
+        }
+        
+        .period-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+        
+        .client-info {
+            margin: 15px 0;
+        }
+        
+        .client-line {
+            display: flex;
+            margin: 5px 0;
+        }
+        
+        .client-label {
+            width: 200px;
+            font-weight: bold;
+        }
+        
+        .table-container {
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+        
+        .text-left {
+            text-align: left;
+        }
+        
+        .text-right {
+            text-align: right;
+        }
+        
+        .totals {
+            margin-left: auto;
+            width: 300px;
+            margin-top: 20px;
+        }
+        
+        .total-line {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            padding: 2px 0;
+        }
+        
+        .total-line.final {
+            border-top: 1px solid black;
+            font-weight: bold;
+            padding-top: 8px;
+            margin-top: 10px;
+        }
+        
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 30px;
+        }
+        
+        .qr-container {
+            text-align: center;
+        }
+        
+        .cae-info {
+            text-align: right;
+        }
+        
+        .print-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .print-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">🖨️ Imprimir Factura</button>
+    
+    <div class="header">
+        <div class="company-info">
+            <div class="company-name">Empresa imaginaria<br>S.A.</div>
+            <div class="info-line"><strong>Razón social:</strong> Empresa imaginaria S.A.</div>
+            <div class="info-line"><strong>Domicilio Comercial:</strong> Calle falsa 123</div>
+            <div class="info-line"><strong>Condición Frente al IVA:</strong> Responsable inscripto</div>
+        </div>
+        
+        <div class="document-type">B</div>
+        
+        <div class="invoice-info">
+            <div class="invoice-title">Factura</div>
+            <div class="info-line"><strong>Punto de Venta:</strong> 0001 &nbsp;&nbsp;&nbsp;&nbsp; <strong>Comp. Nro:</strong> 000000032</div>
+            <div class="info-line"><strong>Fecha de Emisión:</strong> 25/10/2023</div>
+            <div class="info-line"><strong>CUIT:</strong> 12345678912</div>
+            <div class="info-line"><strong>Ingresos Brutos:</strong> 12345432</div>
+            <div class="info-line"><strong>Fecha de Inicio de Actividades:</strong> 25/10/2023</div>
+        </div>
+    </div>
+    
+    <div class="separator"></div>
+    
+    <div class="period-info">
+        <span><strong>Período Facturado Desde:</strong> 25/10/2023 &nbsp;&nbsp; <strong>Hasta:</strong> 25/10/2023</span>
+        <span><strong>Fecha de Vto. para el pago:</strong> 25/10/2023</span>
+    </div>
+    
+    <div class="separator"></div>
+    
+    <div class="client-info">
+        <div class="client-line">
+            <span class="client-label"><strong>CUIL/CUIT:</strong> 12345678912</span>
+            <span><strong>Apellido y Nombre / Razón social:</strong> Pepe perez</span>
+        </div>
+        <div class="client-line">
+            <span class="client-label"><strong>Condición Frente al IVA:</strong> Consumidor final</span>
+            <span><strong>Domicilio:</strong> Calle falsa 123</span>
+        </div>
+        <div class="client-line">
+            <span class="client-label"><strong>Condición de venta:</strong> Efectivo</span>
+        </div>
+    </div>
+    
+    <div class="separator"></div>
+    
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Producto / Servicio</th>
+                    <th>Cantidad</th>
+                    <th>U. Medida</th>
+                    <th>Precio Unit.</th>
+                    <th>% Bonif.</th>
+                    <th>Imp. Bonif.</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>321</td>
+                    <td class="text-left">Madera</td>
+                    <td>1,00</td>
+                    <td>Unidad</td>
+                    <td class="text-right">150,00</td>
+                    <td>0,00</td>
+                    <td class="text-right">0,00</td>
+                    <td class="text-right">150,00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="totals">
+        <div class="total-line">
+            <span><strong>Subtotal: $</strong></span>
+            <span><strong>150,00</strong></span>
+        </div>
+        <div class="total-line">
+            <span><strong>Importe Otros Tributos: $</strong></span>
+            <span><strong>0,00</strong></span>
+        </div>
+        <div class="total-line final">
+            <span><strong>Importe total: $</strong></span>
+            <span><strong>150,00</strong></span>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="qr-container">
+            <canvas id="qr-canvas" width="120" height="120"></canvas>
+        </div>
+        
+        <div class="cae-info">
+            <div><strong>CAE N°:</strong> 123456789123456</div>
+            <div><strong>Fecha de Vto. de CAE:</strong> 05/11/2023</div>
+        </div>
+    </div>
+    
+    <script>
+        // Generar código QR
+        const qr = new QRious({
+            element: document.getElementById('qr-canvas'),
+            value: 'https://afip.gob.ar/fe/qr/?qr-data={"ver":1,"fecha":"2023-10-25","cuit":12345678912,"ptoVta":1,"tipoCmp":6,"nroCmp":32,"importe":150.00,"moneda":"PES","ctz":1,"tipoDocRec":99,"nroDocRec":0,"tipoCodAut":"E","codAut":123456789123456}',
+            size: 120,
+            level: 'M'
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+1_
+Si son iguales
+
+2_
+a) La salida es: bar1
+b) La salida es: 5942
+c) No hay salida
+
+3_
+a)Has entrado en esta pagina a las 0 horas, con 40 minutos y 30 segundos, del 6/9/2025 (es la fecha y hota en la que cargue la pagina)
+b)5+6=11
+
+4_
+<form method="post" action="">
+    <label for="nombre_usuario">Ingresá tu nombre:</label> 
+    <input type="text" name="nombre_usuario">
+    <input type="submit" value="Enviar">
+</form>
+
+<?php
+function comprobar_nombre_usuario($nombre_usuario)
+{     
+    // Compruebo que el tamaño del string sea válido  
+    if (strlen($nombre_usuario) < 3 || strlen($nombre_usuario) > 20) {
+        echo $nombre_usuario . " no es válido<br>";        
+        return false;     
+    }  
+
+    // Compruebo que los caracteres sean los permitidos     
+    $permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_";  
+    for ($i = 0; $i < strlen($nombre_usuario); $i++) {
+        if (strpos($permitidos, substr($nombre_usuario, $i, 1)) === false) {
+            echo $nombre_usuario . " no es válido<br>";  
+            return false;
+        }  
+    }    
+
+    echo $nombre_usuario . " es válido<br>";     
+    return true;  
+}
+
+// Llamo a la función solo si se envió el formulario
+if (isset($_POST['nombre_usuario'])) {
+    $nombre = $_POST['nombre_usuario'];
+    comprobar_nombre_usuario($nombre);
+}
+?>

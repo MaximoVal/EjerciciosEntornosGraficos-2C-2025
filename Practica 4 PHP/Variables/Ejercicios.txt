@@ -1,0 +1,23 @@
+1_
+Variables: $a(booleana),$b(caracter),$c(string),$d(entero),$f(entero),$g(entero)
+Operadores: ++; ? : , +=
+Funciones: gettype(parametro:una variable para sacar su tipo), doble(parametor:un numero para devolver su doble), echo(parametro: string para imprimir por pantalla); is_int(parametro: variable), is_string(parametro:variable)
+Estructura de control: if
+La salida es : booleanstringstringinteger1xyzxyz184444
+
+2_
+a) no son iguales ya que el 1ero mostraria del 2 al 10; el 2do muestra del 1 al 10 y el ultimo del 1 al 9
+b) si son iguales
+c)si son iguales
+
+3_
+a) el codigo se utiliza para poder imprimir una tabla 
+b) el código se utiliza para que el usuario ingrese una edad y se determine si es mayor o menor de edad
+
+4_
+<?php echo "El $flor $color \n"; Esta linea generara 2 advertencias dado a que las variables $flor t $colo no están definidas
+  include 'datos.php';
+ echo " El $flor $color";  ?>   Esta linea imprimirá "El calvel blanco"
+
+5_
+
